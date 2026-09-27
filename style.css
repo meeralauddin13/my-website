@@ -1,54 +1,549 @@
-*{
+/* =========================
+   RESET
+========================= */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@media(max-width: 480px){
-    body{
-        background-color: yellow;
-    }
-    h1{
-    color: blue;
-    font-size: 2rem;
-}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
 }
 
-@media(min-width: 480px){
-    body{
-        background-color: yellow;
-    }
-    h1{
-    color: red;
-    font-size: 6rem;
-}
+body {
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-@media(min-width: 640px){
-    body{
-        background-color: green;
-    }
-    h1{
-    color: rgb(255, 251, 0);
-    font-size: 8rem;
-}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 95px;
+
+    background: #000;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 10;
 }
 
-@media(min-width: 768px){
-    body{
-        background-color: red;
-    }
-    h1{
-    color: green;
-    font-size: 10rem;
-}
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 0;
 }
 
-@media(min-width: 1024px){
-    body{
-        background-color: blue;
-    }
-    h1{
-    color: rgb(150, 255, 246);
-    font-size: 12rem;
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-img {
+    width: 145px;
+    height: 75px;
+
+    position: relative;
+
+    color: #fff;
+
+    text-align: center;
 }
+/* 
+
+Top red line
+
+.logo::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 145px;
+    height: 3px;
+
+    background: #ed1c24;
+}
+
+
+Logo text
+
+.logo-name {
+    position: absolute;
+
+    top: 10px;
+    left: 0;
+
+    width: 100%;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: -2px;
+
+    white-space: nowrap;
+}
+
+
+Restaurant
+
+.restaurant {
+    position: absolute;
+
+    top: 42px;
+    left: 42px;
+
+    color: #ed1c24;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+
+    font-style: italic;
+}
+
+
+Bottom red lines
+
+.logo-line {
+    position: absolute;
+
+    left: 0;
+    bottom: 8px;
+
+    width: 145px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-line span:first-child {
+    width: 37px;
+    height: 5px;
+    background: #ed1c24;
+}
+
+.logo-line span:last-child {
+    width: 37px;
+    height: 5px;
+    background: #ed1c24;
+} */
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+.nav-menu a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #ed1c24;
+}
+
+
+/* =========================
+   FRANCHISE BUTTON
+========================= */
+
+.franchise-btn {
+    height: 45px;
+
+    padding: 0 17px;
+
+    border: 1px solid #fff;
+
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   ORDER ONLINE BUTTON
+========================= */
+
+.order-btn {
+    height: 49px;
+
+    padding: 0 12px 0 18px;
+
+    background: #ed1c24;
+
+    border-radius: 27px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* Arrow circle */
+
+.arrow {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #ed1c24;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   HERO / BANNER
+========================= */
+
+.hero {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .navbar-container {
+        padding: 0 30px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: 85px;
+    }
+
+    .navbar-container {
+        padding: 0 20px;
+    }
+
+    .logo {
+        transform: scale(0.85);
+        transform-origin: left center;
+    }
+
+    .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .franchise-btn {
+        height: 40px;
+        padding: 0 12px;
+    }
+
+    .order-btn {
+        height: 42px;
+        padding-left: 12px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        min-height: 75px;
+    }
+
+    .navbar-container {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        transform: scale(0.7);
+        transform-origin: left center;
+        width: 120px;
+    }
+
+    .nav-menu a:not(.order-btn) {
+        display: none;
+    }
+
+    .order-btn {
+        font-size: 12px !important;
+    }
+}
+/* =========================================
+   BRANDS SECTION
+========================================= */
+
+.brands-section {
+    width: 100%;
+    background: #000;
+
+    padding: 70px 20px 70px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.brands-heading {
+    text-align: center;
+
+    color: #fff;
+}
+
+
+.brands-heading h2 {
+    font-size: 38px;
+    font-weight: 300;
+
+    line-height: 1.35;
+
+    margin: 0;
+}
+
+
+.brands-heading h2 span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    letter-spacing: -3px;
+}
+
+
+.brands-heading p {
+    margin-top: 8px;
+
+    color: #d0d0d0;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BRANDS CONTAINER
+========================================= */
+
+.brands-container {
+    width: 1038px;
+    max-width: 100%;
+
+    margin: 38px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   BRAND ITEM
+========================================= */
+
+.brand-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   BRAND CARD
+========================================= */
+
+.brand-card {
+    width: 100%;
+
+    height: 140px;
+
+    background: #fff;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.brand-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.brand-btn {
+    width: 174px;
+
+    height: 52px;
+
+    margin-top: 23px;
+
+    border: 1px solid #4b4b4b;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.brand-btn:hover {
+    background: #ed1c24;
+
+    border-color: #ed1c24;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .brands-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        max-width: 700px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .brands-section {
+        padding: 50px 15px;
+    }
+
+
+    .brands-heading h2 {
+        font-size: 27px;
+    }
+
+
+    .brands-heading h2 span {
+        font-size: 30px;
+    }
+
+
+    .brands-heading p {
+        font-size: 13px;
+    }
+
+
+    .brands-container {
+        grid-template-columns: 1fr;
+
+        max-width: 330px;
+
+        gap: 35px;
+    }
+
 }
